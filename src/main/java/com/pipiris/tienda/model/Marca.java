@@ -31,7 +31,7 @@ private final static long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idMarca;
+	private Long idMarca;
 	
 	@NotBlank
 	@Column(unique = true)

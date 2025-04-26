@@ -30,7 +30,7 @@ private static final long serialVersionUID = 1L;
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long idCategoria;
+	private Long idCategoria;
 	
 	@NotBlank
 	@Column(unique = true)
