@@ -1,4 +1,6 @@
-package com.pipiris.tienda.dto;
+package com.pipiris.tienda.dto.categoria;
+
+import java.util.List;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,9 +12,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-public class ParaCategoriaDTO {
+public class CategoriaResponseDTO {
 	
-	private String modelo;
-	private String marca;
+	private Long idCategoria;
+	private String nombre;
+	private List<ParaCategoriaDTO> productos;
 
 }

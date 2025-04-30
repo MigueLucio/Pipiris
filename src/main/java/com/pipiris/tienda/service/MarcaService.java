@@ -2,7 +2,7 @@ package com.pipiris.tienda.service;
 
 import java.util.List;
 
-import com.pipiris.tienda.dto.MarcaResponseDTO;
+import com.pipiris.tienda.dto.marca.MarcaResponseDTO;
 import com.pipiris.tienda.model.Marca;
 
 public interface MarcaService {

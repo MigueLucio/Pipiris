@@ -2,7 +2,7 @@ package com.pipiris.tienda.service;
 
 import java.util.List;
 
-import com.pipiris.tienda.dto.CategoriaResponseDTO;
+import com.pipiris.tienda.dto.categoria.CategoriaResponseDTO;
 import com.pipiris.tienda.model.Categoria;
 
 public interface CategoriaService {

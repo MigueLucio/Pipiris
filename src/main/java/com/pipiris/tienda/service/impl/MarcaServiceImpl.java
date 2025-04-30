@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.pipiris.tienda.dto.MarcaResponseDTO;
+import com.pipiris.tienda.dto.marca.MarcaResponseDTO;
 import com.pipiris.tienda.mapper.MarcaMapper;
 import com.pipiris.tienda.model.Marca;
 import com.pipiris.tienda.repository.MarcaRepository;

@@ -36,6 +36,7 @@ public class Producto implements Serializable{
 	@NotBlank
 	private String modelo;
 	
+	@NotBlank
 	private String publico;
 	
 	private String nombreImagen;

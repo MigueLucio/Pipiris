@@ -1,4 +1,4 @@
-package com.pipiris.tienda.dto;
+package com.pipiris.tienda.dto.categoria;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,9 +10,9 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter @Setter
-public class ParaMarcaDTO {
-
-	private String modelo;
-	private String categoria;
+public class ParaCategoriaDTO {
 	
+	private String modelo;
+	private String marca;
+
 }

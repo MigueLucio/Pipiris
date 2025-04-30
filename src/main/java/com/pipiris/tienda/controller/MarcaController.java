@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pipiris.tienda.dto.MarcaResponseDTO;
+import com.pipiris.tienda.dto.marca.MarcaResponseDTO;
 import com.pipiris.tienda.model.Categoria;
 import com.pipiris.tienda.model.Marca;
 import com.pipiris.tienda.service.MarcaService;

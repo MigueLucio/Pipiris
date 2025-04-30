@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.pipiris.tienda.dto.CategoriaResponseDTO;
+import com.pipiris.tienda.dto.categoria.CategoriaResponseDTO;
 import com.pipiris.tienda.model.Categoria;
 import com.pipiris.tienda.service.CategoriaService;
 

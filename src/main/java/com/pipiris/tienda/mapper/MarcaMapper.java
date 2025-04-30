@@ -3,7 +3,7 @@ package com.pipiris.tienda.mapper;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 
-import com.pipiris.tienda.dto.MarcaResponseDTO;
+import com.pipiris.tienda.dto.marca.MarcaResponseDTO;
 import com.pipiris.tienda.model.Marca;
 
 @Mapper(componentModel = "spring", uses = ProductoMapper.class)

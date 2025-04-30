@@ -8,7 +8,7 @@ import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
-import com.pipiris.tienda.dto.CategoriaResponseDTO;
+import com.pipiris.tienda.dto.categoria.CategoriaResponseDTO;
 import com.pipiris.tienda.mapper.CategoriaMapper;
 import com.pipiris.tienda.model.Categoria;
 import com.pipiris.tienda.repository.CategoriaRepository;
