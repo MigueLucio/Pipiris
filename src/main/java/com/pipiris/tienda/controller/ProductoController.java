@@ -20,7 +20,6 @@ import com.pipiris.tienda.model.Producto;
 import com.pipiris.tienda.service.ProductoService;
 
 import jakarta.validation.Valid;
-import jakarta.websocket.server.PathParam;
 
 @RestController
 @RequestMapping("/productos")
