@@ -6,13 +6,11 @@ import lombok.Data;
 
 @Data
 public class ProductoRequestDTO {
-	
-	private String modelo;
-	private String publico;
-	private String nombreImagen;
-	private String codigoBarra;
-	private BigDecimal precioUnitario;
+
 	private Long categoria;
+	private String modelo;
 	private Long marca;
+	private String publico;
+	private BigDecimal precioUnitario;
 
 }

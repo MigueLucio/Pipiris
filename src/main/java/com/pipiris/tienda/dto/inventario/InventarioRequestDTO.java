@@ -24,6 +24,10 @@ public class InventarioRequestDTO {
 	@NotBlank
 	private String color;
 	
+	private String nombreImagen;
+	
+	private String codigoBarra;
+	
 	@Min(0)
 	private int stock;
 	

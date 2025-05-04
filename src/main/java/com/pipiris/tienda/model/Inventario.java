@@ -2,6 +2,7 @@ package com.pipiris.tienda.model;
 
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -12,6 +13,7 @@ import jakarta.persistence.MapsId;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -48,18 +50,10 @@ public class Inventario {
     @DecimalMin("0.0")
     private Double precioExtra;
     
-    public static Inventario of(Producto producto, String talla, String color, int stock) {
-        Inventario inv = new Inventario();
-        inv.id = new InventarioId(producto.getIdProducto(), talla, color);
-        inv.producto = producto;
-        inv.stock = stock;
-        inv.ultimaActualizacion = LocalDateTime.now();
-        return inv;
-    }
+    private String nombreImagen;
     
-    public void actualizarStock(int nuevoStock) {
-        this.stock = nuevoStock;
-        this.ultimaActualizacion = LocalDateTime.now();
-    }
+    @Column(unique = true)
+    @NotBlank
+    private String codigoBarra;
 	
 }

@@ -85,8 +85,6 @@ public class ProductoServiceImpl implements ProductoService{
 		
 		existente.setModelo(requestDTO.getModelo());
 		existente.setPublico(requestDTO.getPublico());
-		existente.setNombreImagen(requestDTO.getNombreImagen());
-		existente.setCodigoBarra(requestDTO.getCodigoBarra());
 		existente.setPrecioUnitario(requestDTO.getPrecioUnitario());
 		
 		Categoria categoria = categoriaRepo.findById(requestDTO.getCategoria())

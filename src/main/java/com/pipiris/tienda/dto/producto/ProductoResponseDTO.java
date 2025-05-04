@@ -16,8 +16,6 @@ public class ProductoResponseDTO {
 	private String modelo;
 	private String marca;
 	private String publico;
-	private String nombreImagen;
-	private String codigoBarra;
 	private BigDecimal precioUnitario;
 	
 }

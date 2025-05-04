@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.pipiris.tienda.dto.inventario.InventarioRequestDTO;
 import com.pipiris.tienda.dto.inventario.InventarioResponseDTO;
+import com.pipiris.tienda.dto.inventario.InventarioVariantDTO;
+import com.pipiris.tienda.dto.inventario.InventarioProductoResponseDTO;
 import com.pipiris.tienda.dto.inventario.ReabastecerProductoDTO;
 import com.pipiris.tienda.service.InventarioService;
 
@@ -32,14 +34,14 @@ public class InventarioController {
 	}
 	
 	@GetMapping("/producto/{productoId}")
-	public ResponseEntity<List<InventarioResponseDTO>> listarInventarioPorProductoId(@PathVariable Long productoId){
+	public ResponseEntity<List<InventarioProductoResponseDTO>> listarInventarioPorProductoId(@PathVariable Long productoId){
 		
 		return ResponseEntity.ok(inventarioService.findInventarioByProductoId(productoId));
 	
 	}
 	
 	@GetMapping("/{productoId}/variante")
-	public ResponseEntity<InventarioResponseDTO> BuscarProductoPorCombinacion(@PathVariable Long productoId, 
+	public ResponseEntity<InventarioVariantDTO> BuscarProductoPorCombinacion(@PathVariable Long productoId, 
 																			  @RequestParam String color, 
 																			  @RequestParam String talla){
 		
@@ -48,7 +50,7 @@ public class InventarioController {
 	}
 	
 	@GetMapping("/{productoId}/minimo")
-	public ResponseEntity<List<InventarioResponseDTO>> buscarProductoConStockMino(@PathVariable Long productoId,
+	public ResponseEntity<List<InventarioProductoResponseDTO>> buscarProductoConStockMino(@PathVariable Long productoId,
 																				  @RequestParam int minStock){
 		
 		return ResponseEntity.ok(inventarioService.findProductosLowStock(productoId, minStock));
@@ -79,7 +81,7 @@ public class InventarioController {
 	}
 	
 	@PatchMapping("/reabastecer-producto")
-	public ResponseEntity<List<InventarioResponseDTO>> reabastecerInventario(@RequestBody @Valid ReabastecerProductoDTO reabastecerDTO){
+	public ResponseEntity<List<InventarioVariantDTO>> reabastecerInventario(@RequestBody @Valid ReabastecerProductoDTO reabastecerDTO){
 		
 		return ResponseEntity.ok(inventarioService.reabastecerInventarioDeProducto(reabastecerDTO));
 		
@@ -96,7 +98,5 @@ public class InventarioController {
         return ResponseEntity.noContent().build();
         
     }
-	
-	
 	
 }

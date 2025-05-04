@@ -39,12 +39,6 @@ public class Producto implements Serializable{
 	@NotBlank
 	private String publico;
 	
-	private String nombreImagen;
-
-	@NotBlank
-	@Column(unique = true)
-	private String codigoBarra;
-	
 	@NotNull
 	private BigDecimal precioUnitario;
 	

@@ -1,20 +1,22 @@
 package com.pipiris.tienda.service;
 
-import java.util.List;
-import java.util.Optional;
 
 import com.pipiris.tienda.dto.inventario.InventarioRequestDTO;
 import com.pipiris.tienda.dto.inventario.InventarioResponseDTO;
+import com.pipiris.tienda.dto.inventario.InventarioVariantDTO;
+
+import java.util.List;
+
+import com.pipiris.tienda.dto.inventario.InventarioProductoResponseDTO;
 import com.pipiris.tienda.dto.inventario.ReabastecerProductoDTO;
-import com.pipiris.tienda.model.Inventario;
 
 public interface InventarioService {
 
-	List<InventarioResponseDTO> findInventarioByProductoId(Long productoId);
+	List<InventarioProductoResponseDTO> findInventarioByProductoId(Long productoId);
 
-    InventarioResponseDTO findProductoByVariant(Long productoId, String talla, String color);
+    InventarioVariantDTO findProductoByVariant(Long productoId, String talla, String color);
 
-    List<InventarioResponseDTO> findProductosLowStock(Long productoId, int minStock);
+    List<InventarioProductoResponseDTO> findProductosLowStock(Long productoId, int minStock);
 
     List<InventarioResponseDTO> findProductoAndTalla(Long productoId, String talla);
 
@@ -22,7 +24,7 @@ public interface InventarioService {
 
     InventarioResponseDTO crearInventario(InventarioRequestDTO requestDTO);
 
-    List<InventarioResponseDTO> reabastecerInventarioDeProducto(ReabastecerProductoDTO reabastecerDTO);
+    List<InventarioVariantDTO> reabastecerInventarioDeProducto(ReabastecerProductoDTO reabastecerDTO);
 
     void eliminarInventario(Long productoId, String talla, String color);
 	
